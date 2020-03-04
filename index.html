@@ -9,20 +9,35 @@
 
 </head>
 <body>
-    <div class="container d-flex flex-column justify-content-center align-items-center border"
-        style="height:500px;">
+    <div class="container d-flex flex-column align-items-center border">
 
-        <h1>Random Number Guessing Game</h1>
+        <div class="my-3 d-flex flex-column align-items-center w-75 ">
+            <h1 class="p-2 my-3 border-bottom">Random Number Guessing Game</h1>
+            <p class="p-2">
+                Instructions: Try to pick the correct number, within 1-100! After
+                you press start you can guess a number in the input box and press
+                on the guess button to submit an answer. Every guess uses up a chance, 
+                if run out of chances before finding the right number you lose! 
+            </p>
+            <p class="p-2">
+                Hint: think about what the number CAN'T be after you make a guess,
+                there will be an indicator to tell if your guess was higher or lower
+                than the actual answer.
+            </p>
+        </div>
+        
         <p id="chanceArea"></p>
         <div class="d-flex flex-row my-2 p-2">
-            <button class="mr-2" id="startButton">Start</button>
+            <button class="mr-2 btn bg-warning" id="startButton">Start</button>
             <input class="mr-2" id="guessInput" type="number"/>
-            <button class="mr-2" id="guessButton" disabled>Guess</button>
-            <button class="mr-2" id="resetButton" disabled>Reset</button>
+            <button class="mr-2 btn btn-secondary" id="guessButton" disabled>Guess</button>
+            <button class="mr-2 btn btn-secondary" id="resetButton" disabled>Reset</button>
         </div>
-        <p id="timeArea" class="p-2">...</p>
-        <p id="previousGuessesArea" class="p-2">Previous Guesses:</p>
-        <p id="resultArea" class="p-2">...</p>
+        <div class="container d-flex flex-column align-items-center">
+            <p id="timeArea" class="p-2">...</p>
+            <p id="previousGuessesArea" class="p-2">Previous Guesses:</p>
+            <p id="resultArea" class="p-2">...</p>
+        </div>
     </div>
     <footer>
         <div class="py-2 d-flex justify-content-center bg-secondary">

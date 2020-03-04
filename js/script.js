@@ -131,14 +131,12 @@ function gameOver() {
     displayTime();
     guessButton.disabled = true;
     if(chances <= 0 && wonGame === false) {
-        displayMessage(FAILURE_MESSAGE);
-        resultArea.style.backgroundColor = "#FF5733";
-        resultArea.style.color = "#FFFFFF";
+        displayMessage( `Your number was ${randomNum}. ` + FAILURE_MESSAGE);
+        resultArea.style.color = "#FF5733";
         
     } else if(wonGame === true) {
         displayMessage(SUCCESS_MESSAGE);
-        resultArea.style.backgroundColor = "#03E10D";
-        resultArea.style.color = "#000000";
+        resultArea.style.color = "#03E10D";
     }
 }
 function reset() {
@@ -152,6 +150,7 @@ function reset() {
     userGuess.value = '';
     randomNum = getRandomNum();
     guessesArray.splice(0, guessesArray.length);
+    resultArea.style.color = "#000000";
     console.log("new rand num is:", randomNum);
     console.log(guessesArray);
 }
