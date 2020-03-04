@@ -19,6 +19,7 @@ console.log("Rand num is:", randomNum);
 let chances = 6;
 let wonGame = false;
 let guessesArray = [];
+let matchHistory = [];
 chanceArea.innerHTML = `Chances: ${chances}`;
 
 let time; // time start from 0
@@ -140,6 +141,16 @@ function gameOver() {
     }
 }
 function reset() {
+    /*
+    let match = {
+        round: 1,
+        history: guessesArray,
+    }
+    matchHistory.push(match);
+    let str = JSON.stringify(match);
+    let historyArea = document.getElementById('historyArea');
+    historyArea.innerHTML = JSON.stringify(matchHistory); */
+
     wonGame = false;
     resetTimer();
     chances = 5;
