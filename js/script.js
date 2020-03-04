@@ -130,10 +130,16 @@ function gameOver() {
     clearTimeout(myOutTimer);
     displayTime();
     guessButton.disabled = true;
-    if(chances <= 0 && wonGame === false)
+    if(chances <= 0 && wonGame === false) {
         displayMessage(FAILURE_MESSAGE);
-    else if(wonGame === true)
+        resultArea.style.backgroundColor = "#FF5733";
+        resultArea.style.color = "#FFFFFF";
+        
+    } else if(wonGame === true) {
         displayMessage(SUCCESS_MESSAGE);
+        resultArea.style.backgroundColor = "#03E10D";
+        resultArea.style.color = "#000000";
+    }
 }
 function reset() {
     wonGame = false;
