@@ -8,7 +8,7 @@ const previousGuessArea = document.getElementById('previousGuessesArea');
 const timeArea = document.getElementById('timeArea');
 const SUCCESS_MESSAGE = "Congrats! You've guess correctly and won the game! Press Reset to try again";
 const FAILURE_MESSAGE = "Boo you've run out of chances, try again...";
-const GAME_TIME = 6;
+const GAME_TIME = 10;
 guessButton.addEventListener('click', guess);//events like 'change', and 'input' are in real time constantly checking
 resetButton.addEventListener('click', reset);
 startButton.addEventListener('click', start);
@@ -16,7 +16,7 @@ startButton.addEventListener('click', start);
 //set random number
 let randomNum = getRandomNum();
 console.log("Rand num is:", randomNum);
-let chances = 4;
+let chances = 6;
 let wonGame = false;
 let guessesArray = [];
 chanceArea.innerHTML = `Chances: ${chances}`;
