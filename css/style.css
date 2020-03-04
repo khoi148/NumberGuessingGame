@@ -2,7 +2,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 footer {
-    position: absolute;
+    position: fixed;
     width:100%;
     bottom: 0;
 }
